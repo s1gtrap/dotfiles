@@ -1,3 +1,5 @@
+source $HOME/.zsh/aliases
+
 # oh-my-zsh
 export ZSH="/home/s1g/.oh-my-zsh"
 plugins=(git)
