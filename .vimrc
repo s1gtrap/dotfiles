@@ -13,7 +13,7 @@ call plug#end()
 
 " powerline
 set laststatus=2
-set rtp+=/usr/share/powerline/bindings/vim
+set rtp+=/usr/local/lib/python3.9/site-packages/powerline/bindings/vim
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
