@@ -33,6 +33,16 @@ require('packer').startup(function(use)
   --END
 
 
+  --BEGIB navarasu/onedark.nvim
+  use 'navarasu/onedark.nvim'
+  --END
+
+
+  --BEGIN lukas-reineke/indent-blankline.nvim
+  use "lukas-reineke/indent-blankline.nvim"
+  --END
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
@@ -134,6 +144,27 @@ rt.setup({
     end,
   },
 })
+--END
+
+
+--BEGIB navarasu/onedark.nvim
+require('onedark').setup {
+  style = 'darker',
+  transparent = true,
+}
+require('onedark').load()
+--END
+
+
+--BEGIN lukas-reineke/indent-blankline.nvim
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
+
+require("indent_blankline").setup {
+  show_end_of_line = true,
+  space_char_blankline = " ",
+}
 --END
 
 
