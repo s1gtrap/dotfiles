@@ -42,6 +42,18 @@ require('packer').startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   --END
 
+  --BEGIN nvim-tree/nvim-tree.lua
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end
+  }
+
+  --END
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -165,6 +177,18 @@ require("indent_blankline").setup {
   show_end_of_line = true,
   space_char_blankline = " ",
 }
+--END
+
+--BEGIN nvim-tree/nvim-tree.lua
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
 --END
 
 
