@@ -80,6 +80,9 @@ require('packer').startup(function(use)
   --END
 
 
+  use 'j-hui/fidget.nvim'
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
@@ -374,6 +377,13 @@ eslint.setup({
   },
 })
 --END
+
+
+require"fidget".setup{
+  window = {
+    blend = 0,              -- &winblend for the window
+  },
+}
 
 
 vim.g.loaded_perl_provider = 0
