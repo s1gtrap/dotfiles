@@ -83,6 +83,16 @@ require('packer').startup(function(use)
   use 'j-hui/fidget.nvim'
 
 
+  use {
+    'lewis6991/gitsigns.nvim',
+    -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+  }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
@@ -384,6 +394,10 @@ require"fidget".setup{
     blend = 0,              -- &winblend for the window
   },
 }
+
+
+require('gitsigns').setup()
+require('lualine').setup()
 
 
 vim.g.loaded_perl_provider = 0
