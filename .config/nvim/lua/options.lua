@@ -25,3 +25,10 @@ vim.opt.ignorecase = true           -- ignore case in searches by default
 vim.opt.smartcase = true            -- but make it case sensitive if an uppercase is entered
 
 vim.g.mapleader = ' ';
+
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
