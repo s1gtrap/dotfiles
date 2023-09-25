@@ -55,3 +55,4 @@ unset __conda_setup
 
 # opam configuration
 [[ ! -r /Users/s1g/.opam/opam-init/init.zsh ]] || source /Users/s1g/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
