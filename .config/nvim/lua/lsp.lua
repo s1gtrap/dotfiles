@@ -43,6 +43,7 @@ require("lspconfig").lua_ls.setup {
 }
 require("lspconfig").rust_analyzer.setup {}
 require("lspconfig").ocamllsp.setup {}
+require("lspconfig").clangd.setup {}
 
 -- Set different settings for different languages' LSP
 -- LSP list: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
