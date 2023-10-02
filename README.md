@@ -1,12 +1,26 @@
 # macOS setup
 
-1. Install [Homebrew](https://brew.sh)
+1. Install [Homebrew](https://brew.sh):
 
-    1. Don't forget to change `.zprofile` for `PATH` changes (as noted after install):
+    1. Run
+
+        ```zsh
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
+
+    1. Don't forget to change `.zprofile` for `PATH` changes as noted after install:
         ```zsh
         % cat .zprofile 
         
         eval "$(/usr/local/bin/brew shellenv)"
+        ```
+
+1. Install [Antigen](https://antigen.sharats.me/)
+
+    1. Run
+
+        ```zsh
+        brew install antigen
         ```
 
 1. Generate SSH key:
