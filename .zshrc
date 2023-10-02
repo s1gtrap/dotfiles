@@ -1,12 +1,25 @@
+source /usr/local/share/antigen/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle luismayta/zsh-rust --branch=main
+
+
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell Antigen that you're done.
+antigen apply
+
+
 source $HOME/.zsh/aliases
-
-
-# oh-my-zsh
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME=agnoster
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
-
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/s1g/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
