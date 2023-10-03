@@ -1,5 +1,11 @@
 # macOS setup
 
+Either run the following:
+```zsh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/s1gtrap/dotfiles/HEAD/install.sh)"
+```
+or follow the step-by-step:
+
 1. Install [Homebrew](https://brew.sh):
 
     1. Run
