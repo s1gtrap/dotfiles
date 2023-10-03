@@ -18,8 +18,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 echo ".cfg" >> .gitignore
 git clone --bare git@github.com:s1gtrap/dotfiles.git $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-config checkout
-config config --local status.showUntrackedFiles no
+eval config checkout
+eval config config --local status.showUntrackedFiles no
 
 git config --global user.name "William Tange"
 git config --global user.email "will@tan.ge"
