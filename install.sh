@@ -14,12 +14,10 @@ cat ~/.ssh/id_ed25519.pub | pbcopy
 open 'https://github.com/settings/ssh/new'
 echo 'The SSH key was copied to the clipboard, add it to GitHub before continuing..'; read
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 echo ".cfg" >> .gitignore
 git clone --bare git@github.com:s1gtrap/dotfiles.git $HOME/.cfg
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-eval config checkout
-eval config config --local status.showUntrackedFiles no
+/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
+/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
 git config --global user.name "William Tange"
 git config --global user.email "will@tan.ge"
