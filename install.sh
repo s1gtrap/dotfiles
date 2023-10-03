@@ -33,7 +33,6 @@ function useremail() {
 	getstring "$(defaults read MobileMeAccounts Accounts | grep AccountID | cut -d \" -f2)" email
 }
 
-id -P $(stat -f%Su /dev/console) | awk -F '[:]' '{print $8}'
 git config --global user.name "$(username)"
 git config --global user.email "$(useremail)"
 
