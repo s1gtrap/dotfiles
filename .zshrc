@@ -6,7 +6,10 @@ export NVM_DIR="$HOME/.nvm"
 # opam env
 [[ ! -r /Users/s1g/.opam/opam-init/init.zsh ]] || source /Users/s1g/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
-source /usr/local/share/antigen/antigen.zsh
+# llvm env
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+source /opt/homebrew/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use ohmyzsh/ohmyzsh
@@ -15,7 +18,7 @@ antigen use ohmyzsh/ohmyzsh
 antigen bundle s1gtrap/zsh-core --branch=main
 
 # rustup
-antigen bundle luismayta/zsh-rust --branch=main
+#antigen bundle luismayta/zsh-rust --branch=main
 
 # misc
 antigen bundle zsh-users/zsh-syntax-highlighting
