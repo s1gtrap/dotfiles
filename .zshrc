@@ -1,53 +1,26 @@
-# nvm env
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # opam env
 [[ ! -r /Users/s1g/.opam/opam-init/init.zsh ]] || source /Users/s1g/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
-# llvm env
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-
-source /opt/homebrew/share/antigen/antigen.zsh
+source .antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen use ohmyzsh/ohmyzsh
+antigen use oh-my-zsh
 
-# Fork hence hadenlabs/zsh-core had a typo
-antigen bundle s1gtrap/zsh-core --branch=main
-
-# rustup
-#antigen bundle luismayta/zsh-rust --branch=main
-
-# misc
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle heroku
-antigen bundle nvm
-
-# Default bundles
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
+antigen bundle heroku
 antigen bundle pip
-antigen bundle brew
 antigen bundle lein
-antigen bundle golang
-antigen bundle ember-cli
-antigen bundle emoji
+antigen bundle command-not-found
+antigen bundle nvm
 antigen bundle node
 antigen bundle npm
-antigen bundle rails
-antigen bundle gem
-antigen bundle chruby
-antigen bundle bundler
-antigen bundle docker
-antigen bundle dotenv
-antigen bundle gulp
-antigen bundle virtualenv
-antigen bundle virtualenvwrapper
-antigen bundle vagrant
-antigen bundle yarn
-antigen bundle z
-antigen bundle command-not-found
+#antigen bundle docker
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
 antigen theme agnoster
@@ -56,3 +29,11 @@ antigen theme agnoster
 antigen apply
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
