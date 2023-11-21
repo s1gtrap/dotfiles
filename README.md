@@ -21,12 +21,14 @@ or follow the step-by-step:
         eval "$(/usr/local/bin/brew shellenv)"
         ```
 
+# Setup on all platforms
+
 1. Install [Antigen](https://antigen.sharats.me/)
 
     1. Run
 
         ```zsh
-        brew install antigen
+        git clone git@github.com:zsh-users/antigen.git ~/.antigen
         ```
 
 1. Generate SSH key:
