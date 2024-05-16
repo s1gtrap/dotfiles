@@ -11,7 +11,7 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle heroku
-antigen bundle pip
+#antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
 antigen bundle nvm
@@ -29,11 +29,31 @@ antigen theme agnoster
 antigen apply
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
-export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
+#export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
+#export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+export EDITOR=nvim
+export PATH="/opt/homebrew/opt/bison/bin:$PATH"
+export PATH="/opt/homebrew/opt/llvm@16/bin:$PATH"
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+eval "$(fzf --zsh)"
+
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
