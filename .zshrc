@@ -120,3 +120,6 @@ source <(fzf --zsh)
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 . "$HOME/.cargo/env"
+
+# llvm@19
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
