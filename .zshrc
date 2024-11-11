@@ -103,7 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ $(uname) == "Linux" ]] && test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+[[ $(uname) == "Linux" ]] && test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# TODO: macos brew
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
