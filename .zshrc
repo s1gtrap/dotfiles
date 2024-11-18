@@ -138,3 +138,6 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# kubectl package manager 'krew'
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
