@@ -110,11 +110,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# linux
+# Home-/Linuxbrew
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+## linux
 [[ $(uname) == "Linux" ]] && test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 [[ $(uname) == "Linux" ]] && test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# darwin
+## darwin
 [[ $(uname) == "Darwin" ]] && test -d /opt/homebrew && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
