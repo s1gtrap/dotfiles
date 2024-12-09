@@ -5,7 +5,6 @@
     "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.dap.nlua",
     "lazyvim.plugins.extras.editor.dial",
-    "lazyvim.plugins.extras.editor.fzf",
     "lazyvim.plugins.extras.editor.inc-rename",
     "lazyvim.plugins.extras.editor.telescope",
     "lazyvim.plugins.extras.formatting.black",
@@ -31,7 +30,7 @@
     "lazyvim.plugins.extras.util.startuptime"
   ],
   "news": {
-    "NEWS.md": "7107"
+    "NEWS.md": "7429"
   },
   "version": 7
 }
