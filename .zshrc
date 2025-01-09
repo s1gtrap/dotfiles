@@ -153,3 +153,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Added by `rbenv init` on Mon Dec 16 20:15:45 CET 2024
 eval "$(rbenv init - --no-rehash zsh)"
+
+# bison (for graphviz)
+export PATH="$(brew --prefix)/opt/bison/bin:$PATH"
