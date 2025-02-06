@@ -156,6 +156,3 @@ eval "$(rbenv init - --no-rehash zsh)"
 
 # bison (for graphviz)
 export PATH="$(brew --prefix)/opt/bison/bin:$PATH"
-
-# Init ssh-agent env
-eval $(ssh-agent)
