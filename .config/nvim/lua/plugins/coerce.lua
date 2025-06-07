@@ -1,3 +1,0 @@
-return {
-  { "gregorias/coerce.nvim" },
-}
