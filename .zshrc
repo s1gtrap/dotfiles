@@ -156,3 +156,7 @@ eval "$(rbenv init - --no-rehash zsh)"
 
 # bison (for graphviz)
 export PATH="$(brew --prefix)/opt/bison/bin:$PATH"
+
+# dotnet csharpier
+export PATH=$PATH:~/.dotnet/tools
+export DOTNET_ROOT="/opt/homebrew/Cellar/dotnet/9.0.8/libexec"
